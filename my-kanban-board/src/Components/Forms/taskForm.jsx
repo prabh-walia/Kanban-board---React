@@ -85,7 +85,7 @@ const TaskForm =(props)=>{
   
   <span className='label'> Description (optional):</span>
   <textarea
-      style={{height: '50px' }} // Adjust as needed
+      style={{height: '50px' }} 
       placeholder="Enter your text here..."  value={taskDesc}
       onChange={handleTaskDescChange}
     ></textarea>
