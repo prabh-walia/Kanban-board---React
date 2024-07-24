@@ -25,6 +25,7 @@ const BoardForm =(props)=>{
 
   const handleColumnChange = (index, e) => {
     const newColumns = columns.slice();
+
     newColumns[index].title = e.target.value;
     setColumns(newColumns.filter((c)=>c.title));
   };

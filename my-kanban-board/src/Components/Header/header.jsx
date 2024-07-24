@@ -21,7 +21,7 @@ const data = useSelector((store)=>store.kanban.kanbanData).find((item)=>item.id=
   return (
         
      <div className={`header ${darkmode&&"lightblack"}`}>
-         <div className="logo">
+         <div className={`logo ${darkmode&&"lightblack"}`}>
             <Logo/>
          </div>
          <div className={`heading ${darkmode&&"lightblack"}`}>

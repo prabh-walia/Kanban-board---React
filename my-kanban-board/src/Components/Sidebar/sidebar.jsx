@@ -20,8 +20,9 @@ props.create(true)
 }
     return (
         <div className="sideBar">
+         
             <div style={{padding:"1.6em"}}> All Boards ({data.length})</div>
-
+            <div style={{maxHeight:"450px", overflowY:"scroll"}}>
 
     {data.map((item) => {
    
@@ -43,6 +44,7 @@ props.create(true)
 </>
         );
       })}
+      </div>
       <div
               className={`menu-item  link`}
               onClick={createBoard}

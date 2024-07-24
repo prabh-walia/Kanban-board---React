@@ -41,33 +41,34 @@ cursor:pointer;
 }
 .theme-button {
   height: 48px;
-width: 35em;
+width: 13em;
 background: #F4F7FD;
 display: flex;
 justify-content: center;
+margin-left: 3em;
 
 
 
 }
 .closeSide {
-top:400px;
+top:660px;
 
   gap: 0px;
 
-  position:relative ;
+  position:absolute ;
 }
 .theme {
 
 
 height: 48px;
-top: 370px;
+top: 600px;
 
 gap: 0px;
 
 display: flex;
 justify-content: center;
 align-items: center;
-position: relative;
+position: absolute;
 }
 
 .theme-buttons {
