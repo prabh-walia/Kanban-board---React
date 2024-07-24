@@ -10,22 +10,21 @@ const Header =({createTask})=>{
 const board_name = useSelector((store)=>store.board.selectedBoardId)
 const data = useSelector((store)=>store.kanban.kanbanData).find((item)=>item.id==board_name).columns
 
- const dispatch = useDispatch();
-
+ const darkmode = useSelector((store)=>store.theme.isDarkMode)
  const addTask =()=>{
 
 
-createTask()
+   if(data.length>0){createTask()}
 
  }
     
   return (
         
-     <div className="header">
+     <div className={`header ${darkmode&&"lightblack"}`}>
          <div className="logo">
             <Logo/>
          </div>
-         <div className="heading">
+         <div className={`heading ${darkmode&&"lightblack"}`}>
             
               <div className="head_text">{board_name}</div>
               <div className="head_action">

@@ -34,7 +34,11 @@ width: 20.6%;
 
   
 }
-
+.lightblack {
+  background:#2b2c37 !important;
+  border:none;
+  color:#fff !important
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

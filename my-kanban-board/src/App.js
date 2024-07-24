@@ -8,6 +8,7 @@ import Sidebar from './Components/Sidebar/sidebar';
 import Modal from './Components/Modal/Modal';
 
 import { useSelector } from 'react-redux';
+
 import { store } from "./redux-store/appStore"
 import BoardForm from './Components/Forms/boardForm';
 import TaskForm from './Components/Forms/taskForm';
@@ -53,7 +54,7 @@ const board =()=>{
     </div>
      <div className={ `${darkmode?"darktheme":"App-body"}`}>
 
-    {sidebar==true&& <div className='sidebar'>
+    {sidebar==true&& <div className={`sidebar ${darkmode&&"lightblack"}`}>
       <Sidebar createBoard={board} setTitle={setTitle} create={setCreate} changeSide={changeSide}/>
        </div>
 }

@@ -4,11 +4,13 @@ import {useDispatch} from "react-redux";
 import { addColumn,removeItem } from "../../redux-store/kanbanStore";
 import kanbandata from '../../redux-store/dummy'
 import { useSelector } from "react-redux";
+
 const Board =(props)=>{
     const boardId = useSelector((store)=>store.board.selectedBoardId)
     const dispatch= useDispatch();
     const data = useSelector((store)=>store.kanban.kanbanData).find((item)=>item.id==boardId).columns
-    
+
+   const darkmode = useSelector((store)=>store.theme.isDarkMode)
     const addColumns =()=>{
         props.createBoard()
 
@@ -26,7 +28,7 @@ const Board =(props)=>{
 
        {data.length==0 && 
        <div className={`message-box ${ props.sidebar ==false&& "m1"}`}>
-      <div className="message">
+      <div className={`message ${darkmode&&"white"}`}>
        This board is empty. Create a new column to get started.
        </div>
       
