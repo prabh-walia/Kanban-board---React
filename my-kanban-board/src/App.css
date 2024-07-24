@@ -1,0 +1,74 @@
+
+* {
+  margin:0;
+  padding:0;
+  overflow-y: hidden;
+  
+}
+.side-button {
+  width: 56px;
+height: 48px;
+top: 944px;
+gap: 0px;
+border-radius: 0px 100px 100px 0px;
+opacity: 0px;
+background: #635FC7;
+position: fixed;
+top:90%;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 999;
+
+}
+.side-button:hover{
+  background: #A8A4FF;
+  cursor:pointer
+}
+.sidebar {
+  width: 296px;
+  background: #ffffff;
+  border-right:1px solid #E4EBFA;
+  height: 90vh;
+  position: relative;
+
+  
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.board {
+  overflow-x: auto;
+  width: 100%;
+}
+.App-body {
+  background: #f4f7fd;
+
+  min-height: 100vh;
+  display: flex;
+
+
+}
+.darktheme {
+  background:#20212c;
+
+  min-height: 100vh;
+  display: flex;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

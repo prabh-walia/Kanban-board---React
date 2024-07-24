@@ -1,0 +1,129 @@
+.sideBar {
+    margin-top: 0.6em;
+    width: 100%;
+    height: 99vh;
+
+}
+.menubar{
+    width: 300px;
+    height: auto;
+
+}
+.menu-item {
+    width: 240px;
+    height: 40px;
+    top: 34px;
+    gap: 0px;
+    padding-left:1.5em;
+    border-radius: 0px 100px 100px 0px;
+    opacity: 0px;
+    padding-top:1em;
+    cursor: pointer;
+
+    
+}
+
+.purpleBg {
+    background: #635FC7;
+    color:#fff
+
+}
+.link {
+    color: #635FC7;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+cursor:pointer;
+    margin-top: 1em;
+  
+
+    
+}
+.theme-button {
+  height: 48px;
+width: 35em;
+background: #F4F7FD;
+display: flex;
+justify-content: center;
+
+
+
+}
+.closeSide {
+top:400px;
+
+  gap: 0px;
+  opacity: 0px;
+  position:relative ;
+}
+.theme {
+
+
+height: 48px;
+top: 370px;
+
+gap: 0px;
+opacity: 0px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
+.theme-buttons {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 40.5px; 
+  height: 20.25px; 
+  background: #635FC7;
+  display: block;
+  border-radius: 12px;
+  position: relative;
+  transition: background 0.3s;
+}
+
+/* Style the toggle switch knob */
+label:after {
+  content: '';
+  position: absolute;
+  top: 1.6px; 
+  left: 1.6px; 
+  width: 17px; 
+  height: 17px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+
+input:checked + label {
+  background: #635FC7;
+}
+
+
+input:checked + label:after {
+  left: calc(100% - 18.6px); 
+}
+
+
+label:active:after {
+  width: 20.25px;
+  height: 20.25px; 
+}

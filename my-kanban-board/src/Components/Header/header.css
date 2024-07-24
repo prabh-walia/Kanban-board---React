@@ -1,0 +1,85 @@
+.header {
+    background: #fff;
+    height:97px;
+    display:flex;
+    border-bottom:1px solid #E4EBFA;
+
+}
+.logo {
+
+    width:300px;
+    display: flex;
+    align-items: center;
+    padding:1.8em;
+    border-right:1px solid #E4EBFA;
+
+
+}
+.logo-text {
+
+
+    width: 80%;
+    display: flex;
+    align-items: center;
+   padding:0.3em;
+    font-family: Plus Jakarta Sans, sans-serif;
+
+    font-size: 32px;
+    font-weight: 800;
+
+}
+.heading {
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+
+}
+.head_text {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding : 1.3em;
+    font-family: Plus Jakarta Sans, sans-serif;
+
+    font-size: 24px;
+    font-weight: 700;
+
+
+}
+.head_action {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.add_button {
+    background: #635FC7;
+    width: 10em;
+    height: 2.6em;
+    border:none;
+    outline: none;
+    border-radius:50px;
+font-family: Plus Jakarta Sans, sans-serif;
+font-size: 17px;
+font-weight: 700;
+color:#fff;
+cursor: pointer;
+
+
+
+
+}
+.disableButton {
+    background: #635FC7;
+
+    width: 10em;
+    height: 2.6em;
+    border:none;
+    outline: none;
+    opacity: 0.4;
+    border-radius:50px;
+font-family: Plus Jakarta Sans, sans-serif;
+font-size: 17px;
+font-weight: 700;
+color:#fff;
+cursor: pointer;
+}
