@@ -17,7 +17,7 @@ const BoardForm =(props)=>{
     { id: 'column-2', title: 'In Progress', tasks: [] },
    
   ]
-  const [columns, setColumns] = useState(data||defaultcol);
+  const [columns, setColumns] = useState(props.create==true?[]:data);
 
   const handleBoardNameChange = (e) => {
     setBoardName(e.target.value);
