@@ -12,7 +12,7 @@ import { store } from "./redux-store/appStore"
 import BoardForm from './Components/Forms/boardForm';
 import TaskForm from './Components/Forms/taskForm';
 function App() {
-  const [sidebar,setSidebar]=useState(false)
+  const [sidebar,setSidebar]=useState(true)
   const [modalOpen,setModalOpen]=useState(false)
   const [title,setTitle]=useState()
   const [create,setCreate]=useState(false)
