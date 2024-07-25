@@ -9,7 +9,7 @@ const BoardForm =(props)=>{
   console.log("props",props);
   const dispatch = useDispatch();
   const board_name = useSelector((store)=>store.board.selectedBoardId)
-  const data = useSelector((store)=>store.kanban.kanbanData).find((item)=>item.id==board_name).columns
+  const data = useSelector((store)=>store.kanban.kanbanData).find((item)=>item.id==board_name)?.columns
 
   const [boardName, setBoardName] = useState(props.create==false?board_name:"");
   const defaultcol = [

@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 const Board =(props)=>{
     const boardId = useSelector((store)=>store.board.selectedBoardId)
     const dispatch= useDispatch();
-    const data = useSelector((store)=>store.kanban.kanbanData).find((item)=>item.id==boardId).columns
+    const data = useSelector((store)=>store.kanban.kanbanData).find((item)=>item.id==boardId)?.columns
 
    const darkmode = useSelector((store)=>store.theme.isDarkMode)
     const addColumns =()=>{
