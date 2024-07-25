@@ -21,8 +21,8 @@ const Board =(props)=>{
         <div className="kanban_board">
         <Kanban data = { data }/>
         </div>
-        {data.length!=0 &&   <div className="create_column">
-        <div className="Column_button" onClick={addColumns}>+ Add new column</div>
+        {data.length!=0 &&   <div className={`create_column `}>
+        <div className={`Column_button ${darkmode&&"lightblack"}`}onClick={addColumns}>+ Add new column</div>
         </div>
 }
 

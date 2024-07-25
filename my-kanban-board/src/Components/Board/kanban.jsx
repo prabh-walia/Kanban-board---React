@@ -7,6 +7,7 @@ const Kanban =({data})=>{
             <div className="kanban">
                 {data.map(column => (
                         <Column key={column.id} title={column.title} tasks={column.tasks} />
+                       
                 ))}
                 </div>
 

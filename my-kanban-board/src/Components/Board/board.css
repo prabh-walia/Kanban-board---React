@@ -12,6 +12,7 @@
     display: flex;justify-content: center;
     margin-top: 1em;
 }
+
 .Column_button {
     width: 400px;
     height: 80vh;
@@ -90,6 +91,11 @@ position: relative;
 left:5em;
 
 
+
+}
+.lightblack {
+    background-color:#2b2c37 !important;
+    color:#fff !important;
 
 }
 .white {

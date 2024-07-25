@@ -8,6 +8,7 @@ import BoardModal from '../Modal/Modal';
 
 const Sidebar =(props)=>{
     const board = useSelector((store)=>store.board.selectedBoardId)
+    const darkmode = useSelector((store)=>store.theme.isDarkMode)
 
   const data = useSelector((store)=>store.kanban.kanbanData)
   const dispatch = useDispatch();
@@ -54,8 +55,8 @@ props.create(true)
             </div>
        
     
-       <div className='theme'>
-            <div className="theme-button">
+       <div className={`theme `}>
+            <div className={`theme-button ${darkmode&&"darkblack"}`}>
               <div className="theme-buttons"><img  src="/day.png" alt="logo" /></div>
               <div className="theme-buttons"><ToggleButton/> </div>
               <div className="theme-buttons"><img  src="/night.png" alt="logo" /></div>

@@ -1,9 +1,9 @@
 
 import './form.css'; 
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import {useDispatch} from "react-redux";
 import { addBoard,updateBoard } from "../../redux-store/kanbanStore";
-
+import {selectBoard} from "../../redux-store/boardStore"
 import { useSelector } from "react-redux";
 const BoardForm =(props)=>{
   console.log("props",props);
@@ -22,7 +22,9 @@ const BoardForm =(props)=>{
   const handleBoardNameChange = (e) => {
     setBoardName(e.target.value);
   };
-
+  useEffect(()=>{
+    addColumn();
+  },[])
   const handleColumnChange = (index, e) => {
     const newColumns = columns.slice();
 
@@ -49,21 +51,25 @@ const BoardForm =(props)=>{
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    let filteredColumns = columns.filter(column => column.title !== '');
     const boardData = {
       id: boardName,
     
-      columns: columns.map((column, index) => ({
+      columns: filteredColumns.map((column, index) => ({
         ...column,
         id: `column-${index + 1}`,
       })),
     };
     console.log("whole data =>",boardData);
+   
+
     props.onSubmit(boardData);
     if(props.create==false){
      dispatch(updateBoard(boardData))
     }
     else {
-      dispatch(addBoard(boardData))
+      boardName&&dispatch(addBoard(boardData))
+      dispatch(selectBoard(boardName))
     }
     setBoardName('');
     

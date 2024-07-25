@@ -68,9 +68,9 @@ select:focus {
 }
 
 .w-100 {
-  width :100%
+  width :100% !important;
 }
 .lightVoilet {
-background-color: #e0e0ee;
-color:#635FC7
+background-color: #e0e0ee !important;
+color:#635FC7 !important;
 }

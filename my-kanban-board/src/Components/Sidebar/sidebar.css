@@ -39,6 +39,10 @@ cursor:pointer;
 
     
 }
+.darkblack {
+  background:#20212c !important;
+  color:#fff !important
+}
 .theme-button {
   height: 48px;
 width: 13em;
