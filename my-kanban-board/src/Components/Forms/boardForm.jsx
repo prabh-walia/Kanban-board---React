@@ -69,7 +69,7 @@ const BoardForm =(props)=>{
     }
     else {
       boardName&&dispatch(addBoard(boardData))
-      dispatch(selectBoard(boardName))
+      boardNamedispatch(selectBoard(boardName))
     }
     setBoardName('');
     
