@@ -26,10 +26,16 @@ const BoardForm =(props)=>{
     addColumn();
   },[])
   const handleColumnChange = (index, e) => {
-    const newColumns = columns.slice();
-
-    newColumns[index].title = e.target.value;
-    setColumns(newColumns.filter((c)=>c.title));
+     
+    const updatedColumns = columns.map((column, i) =>
+        i === index
+            ? { ...column, title: e.target.value } 
+            :    column
+    );
+ 
+     
+    if(updatedColumns.length-1> index) updatedColumns[index].title = e.target.value;
+    setColumns(updatedColumns.filter((c)=>c.title));
   };
   const removeColumn = (index) => {
     const newColumns = columns.slice();
@@ -109,9 +115,9 @@ const BoardForm =(props)=>{
           </div>
         ))}
       </div>
-      <button className="add_Columnbutton w-100 lightVoilet m-4"type="button" onClick={addColumn}>
-        Add Column
-      </button>
+    <button className="add_Columnbutton w-100 lightVoilet m-4"type="button" onClick={addColumn}>
+      Add Column
+    </button>
       <button className='add_button m-4 w-100' type="submit">Submit</button>
     </form>
     )

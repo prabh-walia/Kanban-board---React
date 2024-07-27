@@ -47,13 +47,16 @@ const kanbanSlice=createSlice(
                 state.kanbanData[index] = updatedBoard;
               }
             },
-            removeItem :(state,action)=>{
-        
+            removeBoard :(state,action)=>{
+
+              const boardId = action.payload;
+             state.kanbanData= state.kanbanData.filter((board)=>board.id!=boardId)
+
 
             },
        
         }
     }
 );
-export const {addBoard,addColumn,addTasks,removeItem,updateBoard} = kanbanSlice.actions;
+export const {addBoard,addColumn,addTasks,removeBoard,updateBoard} = kanbanSlice.actions;
 export default kanbanSlice.reducer;

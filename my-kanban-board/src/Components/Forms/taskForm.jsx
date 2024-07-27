@@ -9,11 +9,11 @@ const TaskForm =(props)=>{
   console.log("props",props);
   const dispatch = useDispatch();
   const board_name = useSelector((store)=>store.board.selectedBoardId)
-  const data = useSelector((store)=>store.kanban.kanbanData).find((item)=>item.id==board_name).columns
+  // const data = useSelector((store)=>store.kanban.kanbanData).find((item)=>item.id==board_name).columns
   const [selectedColumnId, setSelectedColumnId] = useState('');
   const [taskName, setTaskName] = useState();
 
-  const [columns, setColumns] = useState(data);
+  // const [columns, setColumns] = useState(data);
   const [tasks, setTasks] = useState([]);
   const [taskDesc,setTaskDescName]=useState()
 
@@ -24,23 +24,23 @@ const TaskForm =(props)=>{
     setTaskDescName(e.target.value);
   }
   const handleColumnChange = (index, e) => {
-    const newColumns = columns.slice();
+    const newColumns = tasks.slice();
     newColumns[index].title = e.target.value;
-    setColumns(newColumns);
+    setTasks(newColumns);
   };
   const removeColumn = (index) => {
-    const newColumns = columns.slice();
+    const newColumns = tasks.slice();
     newColumns.splice(index, 1);
-    setColumns(newColumns);
+    setTasks(newColumns);
   };
 
   const addColumn = () => {
-    const newColumn = {
-      id: `column-${columns.length + 1}`,
+    const newSubtasks = {
+      id: `column-${tasks.length + 1}`,
       title: '',
       tasks: [],
     };
-    setColumns([...columns, newColumn]);
+    setTasks([...tasks, newSubtasks]);
 
 
   };
@@ -58,7 +58,7 @@ const TaskForm =(props)=>{
         columnId: selectedColumnId,
         description: taskDesc,
         boardId:board_name,
-        subtasks:[]
+        subtasks:tasks
       };
   
       console.log("Submitted task data:", taskData);
@@ -115,7 +115,7 @@ const TaskForm =(props)=>{
         ))}
       </div>
       <button className="add_Columnbutton m-4 w-100 lightVoilet"type="button" onClick={addColumn}>
-        Add Column
+        Add Subtasks
       </button>
  
       <div style={{ marginTop: "0.5em" }}>
@@ -125,7 +125,7 @@ const TaskForm =(props)=>{
           onChange={(e) => setSelectedColumnId(e.target.value)}
         >
           <option value="">Select a column</option>
-          {columns.map((column) => (
+          {tasks.map((column) => (
             <option key={column.id} value={column.id}>
               {column.title}
             </option>
