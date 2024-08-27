@@ -9,6 +9,7 @@ import { useState } from 'react';
 const Board =(props)=>{
     const boardId = useSelector((store)=>store.board.selectedBoardId)
     const dispatch= useDispatch();
+   
    let data=useSelector((store)=>store.kanban.kanbanData).find((item)=>item.id==boardId)?.columns|| []
 
    const darkmode = useSelector((store)=>store.theme.isDarkMode)

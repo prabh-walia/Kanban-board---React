@@ -9,7 +9,7 @@ const TaskForm =(props)=>{
   console.log("props",props);
   const dispatch = useDispatch();
   const board_name = useSelector((store)=>store.board.selectedBoardId)
-  // const data = useSelector((store)=>store.kanban.kanbanData).find((item)=>item.id==board_name).columns
+  const data = useSelector((store)=>store.kanban.kanbanData).find((item)=>item.id==board_name).columns
   const [selectedColumnId, setSelectedColumnId] = useState('');
   const [taskName, setTaskName] = useState();
 
@@ -125,7 +125,7 @@ const TaskForm =(props)=>{
           onChange={(e) => setSelectedColumnId(e.target.value)}
         >
           <option value="">Select a column</option>
-          {tasks.map((column) => (
+          {data.map((column) => (
             <option key={column.id} value={column.id}>
               {column.title}
             </option>

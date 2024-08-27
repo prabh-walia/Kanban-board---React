@@ -60,3 +60,4 @@ const kanbanSlice=createSlice(
 );
 export const {addBoard,addColumn,addTasks,removeBoard,updateBoard} = kanbanSlice.actions;
 export default kanbanSlice.reducer;
+
